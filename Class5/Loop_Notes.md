@@ -76,11 +76,76 @@ A prime number is a number greater than `1` that has no divisors other than `1` 
 
 ---
 
-## 4. Important Python Concepts Covered
+## 4. Break and Continue Keywords
+
+Sometimes we want to control the flow of a loop more precisely. Python provides two useful keywords for this:
+
+- `break` → stops the loop completely
+- `continue` → skips the current iteration and moves to the next one
+
+### Example 1: Using `break`
+```python
+for i in range(1, 10):
+    if i == 5:
+        break
+    print(i)
+```
+
+### Explanation
+- The loop prints numbers from `1` to `4`.
+- When `i` becomes `5`, `break` stops the loop immediately.
+
+### Example 2: Using `continue`
+```python
+for i in range(1, 6):
+    if i == 3:
+        continue
+    print(i)
+```
+
+### Explanation
+- When `i` is `3`, the `continue` statement skips that value.
+- The loop continues with the next value `4` and `5`.
+
+### Example 3: Using `break` in a `while` loop
+```python
+i = 1
+while i <= 10:
+    if i == 6:
+        break
+    print(i)
+    i += 1
+```
+
+### Explanation
+- The loop stops as soon as `i` becomes `6`.
+
+### Example 4: Using `continue` in a `while` loop
+```python
+i = 0
+while i < 5:
+    i += 1
+    if i == 3:
+        continue
+    print(i)
+```
+
+### Explanation
+- When `i` becomes `3`, that iteration is skipped.
+- The loop continues from the next value.
+
+### What this teaches
+- `break` is used when we want to stop the loop early.
+- `continue` is used when we want to skip a particular iteration.
+
+---
+
+## 5. Important Python Concepts Covered
 
 - `for` loop
 - `while` loop
 - `break`
+- `continue`
 - `input()`
 - `print()` with `end=" "`
 - `+=` shorthand operator
@@ -88,10 +153,12 @@ A prime number is a number greater than `1` that has no divisors other than `1` 
 
 ---
 
-## 5. Short Summary
+## 6. Short Summary
 
 These programs show the difference between `for` loops and `while` loops:
 - `for` loops are ideal for going through known sequences.
 - `while` loops are useful when the number of repetitions depends on a condition.
+- `break` stops the loop completely.
+- `continue` skips the current iteration and continues with the next one.
 
-In short, loops help us repeat tasks efficiently and solve problems like printing values, summing numbers, and checking whether a number is prime.
+In short, loops help us repeat tasks efficiently, and keywords like `break` and `continue` give us more control over how the loop behaves.
